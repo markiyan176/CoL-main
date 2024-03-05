@@ -397,3 +397,48 @@ function Customise_night() {
   day.classList.remove("container_customise_day");
   day.classList.add("container_customise_night");
 }
+
+const translations = {
+  uk: {
+    "Single": "Одиничний",
+  },
+  pl: {
+    "Single": "Pojedynczy",
+  }
+};
+
+let currentLanguage = "en"; // Початкова мова
+
+
+document.getElementById("Eng").addEventListener("click", function() {
+  currentLanguage = "en";
+  updateTexts("Single");
+});
+
+document.getElementById("Ukr").addEventListener("click", function() {
+  currentLanguage = "uk";
+  updateTexts("Single");
+});
+
+document.getElementById("Pol").addEventListener("click", function() {
+  currentLanguage = "pl";
+  updateTexts("Single");
+});
+
+
+
+function updateTexts(key) {
+  const textContainer = document.getElementById("Photo_day");
+  if (translations[currentLanguage]) {
+    const textToDisplay = translations[currentLanguage][key];
+    textContainer.innerText = textToDisplay || key;
+  } else {
+    textContainer.innerText = key;
+  }
+}
+
+
+
+
+
+updateTexts("Single");
