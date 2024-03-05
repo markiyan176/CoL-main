@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./menu.js"></script>
+    <link rel="stylesheet" href="menu.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code of Logic</title>
+  </head>
+  <body>
+    <div class="container_day" id="Photo_day">
+      <div class="container_daynight" id="Day_night">
+        <div class="rules_day">
+          <b>?</b>
+        </div>
+
+        <div class="day" id="Day" onclick="Check()">
+          <div class="cloud" id="Cloud"></div>
+          <div class="sun" id="Sun"></div>
+        </div>
+
+        <div class="night" id="Night">
+          <div class="moon" id="Moon">
+            <div class="moon_sircle1"></div>
+            <div class="moon_sircle2"></div>
+            <div class="moon_sircle3"></div>
+          </div>
+          <div class="star star1"></div>
+          <div class="star star2"></div>
+          <div class="star star3"></div>
+          <div class="star star4"></div>
+          <div class="star star5"></div>
+          <div class="star star6"></div>
+        </div>
+      </div>
+      <audio id="Sound" src="./sounds/sound.mp3" type="audio/mpeg"></audio>
+      <audio
+        id="Sound1"
+        src="./sounds/sound copy.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio
+        id="Sound2"
+        src="./sounds/sound copy 2.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio
+        id="Sound3"
+        src="./sounds/sound copy 3.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio
+        id="Sound_enter"
+        src="sounds/sound_enter.mp3"
+        type="audio/mpeg"
+      ></audio>
+      <audio
+        id="Sound_back"
+        src="sounds/sound_back.mp3"
+        type="audio/mpeg"
+      ></audio>
+
+      <div class="container_buttons" id="Buttons">
+        <div class="button1_day" id="Button_1" onmouseover="Sound()">
+          Single
+        </div>
+        <div class="button2_day" id="Button_2" onmouseover="Sound1()">
+          Local
+        </div>
+        <div
+          class="button3_day"
+          id="Button_3"
+          onmouseover="Sound2()"
+          onclick="Customise(), Sound_enter()"
+        >
+          Customise
+        </div>
+        <div
+          class="button4_day"
+          id="Button_4"
+          onmouseover="Sound3()"
+          onclick="Settings(); Sound_enter()"
+        >
+          Settings
+        </div>
+      </div>
+
+      <div class="container_customise_day" id="Customise" style="display: none">
+        <div
+          class="container_butback2"
+          onclick="Customise_back(), Sound_back()"
+        >
+          <div class="button_back2">
+            <img src="./photo/button_back.png" />
+          </div>
+          <div class="text_customise">Customise</div>
+        </div>
+        <div class="text_for_bady">Choose body</div>
+        <div class="bady">
+          <div class="button_customise_1">
+            <img src="./photo/button_for_custom2.png" />
+          </div>
+          <div class="skin">
+            <img src="./photo/Skin1.png" />
+          </div>
+          <div class="button_customise_2">
+            <img src="./photo/button_for_custom .png" />
+          </div>
+        </div>
+        <div class="text_for_gun">Choose gun</div>
+        <div class="guns">
+          <div class="button_customise_3">
+            <img src="./photo/button_for_custom2.png" />
+          </div>
+          <div class="photo_gun">
+            <img src="./photo/gun1.png" />
+          </div>
+          <div class="button_customise_4">
+            <img src="./photo/button_for_custom .png" />
+          </div>
+        </div>
+      </div>
+      <div class="container_sittings" style="display: none" id="Settings">
+        <div class="container_change_lang">
+          
+        </div>
+        <div class="container_butback">
+          <div class="button_back" onclick="Settings_back(); Sound_back()">
+            <img src="./photo/button_back.png" />
+          </div>
+          <div class="text_settings">Settings</div>
+          <img class="container_language" src="./photo/globe.png" height="55">
+          
+        </div>
+        <div class="container_sound">
+          <div class="sound_settings">
+            <img
+              src="./photo/sound_set.png"
+              id="Set_1_on"
+              onclick="Set_1_off()"
+            />
+            <img
+              src="./photo/no_sound.png"
+              style="display: none"
+              id="Set_1_off"
+              onclick="Set_1_on()"
+            />
+            <img
+              src="./photo/sound_set2.png"
+              style="display: none"
+              id="Set_2_on"
+              onclick="Set_2_off()"
+            />
+            <img
+              src="./photo/no_sound2.png"
+              style="display: none"
+              id="Set_2_off"
+              onclick="Set_2_on()"
+            />
+            <img
+              src="./photo/sound_set3.png"
+              style="display: none"
+              id="Set_3_on"
+              onclick="Set_3_off()"
+            />
+            <img
+              src="./photo/no_sound3.png"
+              style="display: none"
+              id="Set_3_off"
+              onclick="Set_3_on()"
+            />
+            <img
+              src="./photo/sound_set4.png"
+              style="display: none"
+              id="Set_4_on"
+              onclick="Set_4_off()"
+            />
+            <img
+              src="./photo/no_sound4.png"
+              style="display: none"
+              id="Set_4_off"
+              onclick="Set_4_on()"
+            />
+          </div>
+          <div class="zero_to_hundred">
+            <div
+              class="block1_day"
+              style="
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                background-color: #22ff00;
+              "
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #95ff00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #b7ff00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #d4ff00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #eaff00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #ffbf00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #ff9500"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #ff6f00"
+            ></div>
+            <div
+              class="block1_day"
+              id="Color"
+              style="background-color: #ff4800"
+            ></div>
+            <div
+              class="block1_day"
+              style="
+                background-color: #ff0000;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+              "
+            >
+              <div class="circle" id="Circle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="managment">
+          <div class="for_code">
+            <div class="text_code">For code</div>
+            <div class="block_for_button">
+              <div class="button_words"></div>
+              <div class="text_lineup">Choose line up</div>
+            </div>
+            <div class="block_for_button">
+              <div class="button_words"></div>
+              <div class="text_lineup">Choose line L</div>
+            </div>
+            <div class="block_for_button">
+              <div class="button_words"></div>
+              <div class="text_lineup">Choose line down</div>
+            </div>
+            <div class="block_for_button">
+              <div class="button_words"></div>
+              <div class="text_lineup">Choose number R</div>
+            </div>
+          </div>
+          <div class="for_shooting">
+            <div class="text_shooting">For shooting</div>
+            <div class="block_for_button2">
+              <div class="button_words"></div>
+              <div class="text_lineup2">Shoot</div>
+            </div>
+            <div class="block_for_button2">
+              <div class="button_words"></div>
+              <div class="text_lineup2">Shoot enemy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container_beta">
+        <div class="text_beta">Beta 1.0</div>
+      </div>
+    </div>
+  </body>
+</html>
