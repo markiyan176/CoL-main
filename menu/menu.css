@@ -4,6 +4,7 @@ body {
   height: 100vh;
   margin: 0;
   color: white;
+  user-select: none;
 }
 .container_day {
   display: flex;
@@ -295,10 +296,7 @@ body {
   top: -0.75em;
   width: 1.6em;
 }
-.container_daynight {
-  width: 100%;
-  margin-top: 62px;
-}
+
 /* ///////////////////////////////////////////////////////////// */
 /* /////////////////////day/night////////////////////// */
 
@@ -696,7 +694,7 @@ body {
 .container_daynight {
   width: 100%;
   display: flex;
-  margin-bottom: 30px;
+  margin-top: 90px;
   justify-content: end;
 }
 
@@ -735,9 +733,9 @@ body {
   align-items: center;
   background-color: #383838;
   border-radius: 15px;
-  border: 4px solid black;
   width: 586px;
   height: 460px;
+  border: 4px solid black;
   border-bottom: 7px solid black;
   font-size: 35px;
   font-family: kavoon;
@@ -772,8 +770,8 @@ body {
 
 .bady {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  justify-content: space-around;
 }
 
 .text_for_bady {
@@ -796,17 +794,38 @@ body {
 .button_customise_1 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color:rgb(202, 233, 37);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   margin-top: 25%;
-  width: 63px;
-  height: 30px;
+  width: 100px;
+  height: 23px;
+  border: 2.5px solid black;
+}
+
+.strilka {
+  color: black;
+  font-size: 30px;
+  font-family: kavoon;
+  margin-bottom: 3px;
 }
 
 .button_customise_2 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color:rgb(202, 233, 37);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   margin-top: 25%;
-  width: 63px;
-  height: 30px;
+  width: 100px;
+  height: 23px;
+  border: 2.5px solid black;
 }
 
 .text_for_gun {
@@ -824,25 +843,43 @@ body {
   flex-direction: row;
   margin-top: 8%;
   margin-left: -15%;
+  justify-content: space-around;
 }
 
 .button_customise_3 {
   display: flex;
   justify-content: center;
-  width: 63px;
-  height: 30px;
+  align-items: center;
+  background-color:rgb(202, 233, 37);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  width: 65px;
+  height: 23px;
+  border: 2.5px solid black;
+  margin-right: 60px;
 }
 .photo_gun {
   display: flex;
-  justify-content: space-around;
-  margin: 18%;
-  margin-top: -5%;
+  width: 25px;
+  height: 25px;
+  margin-right: 70px;
+  margin-bottom: 8%;
 }
 .button_customise_4 {
   display: flex;
   justify-content: center;
-  width: 63px;
-  height: 30px;
+  align-items: center;
+  background-color:rgb(202, 233, 37);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  width: 70px;
+  height: 23px;
+  border: 2.5px solid black;
+  margin-left: 180px;
 }
 
 .container_customise_night {
@@ -1004,9 +1041,53 @@ body {
   margin-top: 5%;
   margin-left: 34%;
 }
-.container_change_lang{
+.change_language {
   position: absolute;
-  width: 120px;
-  height: 80px;
+  display: flex;
+  width: 174px;
+  height: 162px;
   background-color: gray;
+  border-radius: 15px;
+  border: 4px solid black;
+  left: 70.3%;
+  top: 26.5%;
+}
+.flags_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.english {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.ukrainian {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.polish {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.flags_text_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.language_text {
+  font-size: 20px;
+  font-family: kavoon;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, -3px 0 0 #000, 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000;
+  margin-left: 9px;
 }
